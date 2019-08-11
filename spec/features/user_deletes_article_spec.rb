@@ -3,10 +3,10 @@ require "rails_helper"
 describe "user deletes and article" do
   describe "they link from the show page" do
     it "displays all articles without the deleted entry" do
-      artice_1 = Article.create!(title: "Title 1", body: "Body 1")
-      artice_2 = Article.create!(title: "Title 2", body: "Body 2")
+      article_1 = Article.create!(title: "Title 1", body: "Body 1")
+      article_2 = Article.create!(title: "Title 2", body: "Body 2")
 
-      visit artivle_path(article_1)
+      visit article_path(article_1)
       click_link "Delete"
 
       expect(current_path).to eq(articles_path)
